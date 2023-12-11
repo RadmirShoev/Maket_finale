@@ -1,0 +1,147 @@
+/*-----------Общий блок для меню--------*/
+$screen-xs: 320px;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 1120px;
+$screen-xl: 1440px;
+
+.mobile-menu {
+  position: absolute;
+  margin: 0;
+  padding-left: 24px;
+  padding-right: 24px;
+  left: 0;
+  top: 0;
+  width: 320px;
+  box-sizing: border-box;
+  height: 100%;
+  max-height: 1124px;
+  background: #fff;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+    -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+
+  color: #1b1c21;
+  font-family: 'TT Lakes';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @media (min-width: $screen-xs) {
+    display: none;
+  }
+
+  @media (min-width: $screen-md) {
+    display: none;
+  }
+
+  @media (min-width: $screen-xl) {
+    display: flex;
+  }
+}
+
+/*---------СТИЛИ ШАПКИ------------*/
+.mobile-menu__header {
+  width: 100%;
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.header__logo-link {
+  display: inline-block;
+  margin-right: auto;
+}
+
+/*----------СТИЛИ МЕНЮ-------------------*/
+.item {
+  /*сброс стилей элементов списка*/
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  /*сброс стилей всех ссылок*/
+  text-decoration: none;
+  color: #1b1c21;
+}
+
+.main-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-menu__main-menu {
+  margin-top: 18px;
+}
+
+.main-menu__item {
+  margin-top: 32px;
+}
+.main-menu__link--active {
+  color: #7e7e82;
+  pointer-events: none;
+}
+.main-menu__item--active {
+  background: url(../img/highlight.svg) no-repeat left center;
+  transform: translate(-24px);
+  padding: 8px 24px;
+  margin-top: 24px;
+  pointer-events: none;
+}
+.main-menu__item:hover {
+  text-shadow: 0 0 5px #7e7e82;
+}
+
+/*--------------СТИЛИ ПОДВАЛА----------------*/
+.mobile-menu__footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.footer__contacts-side {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 0;
+}
+.email-link {
+  display: block;
+}
+
+.phone-number-link {
+  display: block;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+}
+.lang-side {
+  display: flex;
+  justify-content: flex-start;
+  gap: 7px;
+  padding: 0;
+  padding-top: 40px;
+}
+.lang-link--active {
+  color: #7e7e82;
+  pointer-events: none;
+}
+
+.lang-link:hover {
+  display: block;
+  transform: translatey(-5px);
+  text-shadow: 0 0 5px #7e7e82;
+}

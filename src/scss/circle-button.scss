@@ -1,0 +1,88 @@
+.circle-button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+
+  width: 40px;
+  height: 40px;
+
+  &:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+    transition-duration: 0.2s;
+  }
+  /*------------Подгружаем иконки кнопок----------*/
+
+  &--burger-img {
+    background: url(../img/burger.svg) no-repeat center center;
+  }
+  &--close-img {
+    background: url(../img/close.svg) no-repeat center center;
+  }
+  &--call-img {
+    background: url(../img/call.svg) no-repeat center center;
+  }
+  &--chat-img {
+    background: url(../img/chat.svg) no-repeat center center;
+  }
+  &--profile-img {
+    background: url(../img/profile.svg) no-repeat center center;
+  }
+  &--search-img {
+    background: url(../img/search.svg) no-repeat center center;
+  }
+  &--arroy-img {
+    background: url(../img/brends/arroy.svg) no-repeat center center;
+  }
+  &--repair-img {
+    background: url(../img/repair.svg) no-repeat center center;
+  }
+  &--checkstatus-img {
+    background: url(../img/checkstatus.svg) no-repeat center center;
+  }
+
+  &--with-text {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    font-weight: 500;
+    color: #1b1c21;
+    align-self: center;
+  }
+}
+
+/*------------Подгружаем иконки кнопок----------*/
+/*
+.circle-button--burger-img {
+  background: url(../img/burger.svg) no-repeat center center;
+}
+.circle-button--close-img {
+  background: url(../img/close.svg) no-repeat center center;
+}
+.circle-button--call-img {
+  background: url(../img/call.svg) no-repeat center center;
+}
+.circle-button--chat-img {
+  background: url(../img/chat.svg) no-repeat center center;
+}
+.circle-button--profile-img {
+  background: url(../img/profile.svg) no-repeat center center;
+}
+.circle-button--search-img {
+  background: url(../img/search.svg) no-repeat center center;
+}
+.circle-button--arroy-img {
+  background: url(../img/brends/arroy.svg) no-repeat center center;
+}
+.circle-button--repair-img {
+  background: url(../img/repair.svg) no-repeat center center;
+}
+
+.circle-button--checkstatus-img {
+  background: url(../img/checkstatus.svg) no-repeat center center;
+}
+*/

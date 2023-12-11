@@ -1,0 +1,361 @@
+/*Сперва  общая стилизация, цвета рамки, кнопки и тд*/
+html {
+  font-family: 'TT Lakes', 'Open Sans', 'Arial', sans-serif;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f8f8f8;
+}
+
+.header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border-bottom: 2px solid #d9fff5;
+
+  width: 100%;
+  min-width: 320px;
+  min-height: 88px;
+
+  background-color: #ffffff;
+}
+
+.header__contacts-side {
+  margin-right: 20px;
+}
+
+.main-container {
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 100%;
+}
+
+/*---------------Часть шапки с лого---------------*/
+
+.logo-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 16px;
+}
+
+/*-------------Часть шапки с чатом, звонком и профилем----*/
+.contacts-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 16px;
+}
+
+/*------------Часть шапки с ремонтов--------*/
+
+.repair-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 16px;
+}
+
+/*-----------------------КНОПКА ЧИТАТЬ ДАЛЕЕ----------------*/
+
+.read-more-button {
+  /*сброс базовых стилей кнопок*/
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+
+  /*сброс стиля фокуса*/
+  outline: none;
+
+  background: url(../img/read-more-close.svg) no-repeat left center;
+  width: 140px;
+  height: 24px;
+  display: block;
+
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  font-weight: 500;
+  color: #1b1c21;
+  align-self: center;
+}
+
+.text-content__read-more-button {
+  margin-top: 10px;
+}
+
+/*----ЗАГОЛОВОК----*/
+.title {
+  background: url(../img/highlight.svg) no-repeat left center;
+  display: flex;
+  justify-content: space-between;
+}
+.title__text {
+  font-size: 28px;
+  line-height: 40px;
+  text-align: right;
+  color: #1b1c21;
+  padding-left: 20px;
+}
+
+/*-------------------НАВИГАЦИЯ по ссылкам----------------*/
+.nav {
+  list-style-type: none; /*убирает точки элементов списка*/
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding-left: 16px;
+  overflow-x: scroll;
+}
+
+.nav__item {
+  padding: 8px 12px;
+  min-width: fit-content;
+
+  display: flex;
+  align-items: center;
+}
+
+.nav__link {
+  color: #7e7e82;
+  text-decoration: inherit;
+  font-family: 'TT Lakes';
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.nav__item--selected {
+  border: 2px solid #b8ffec;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.nav__link:hover {
+  color: black;
+}
+
+/*-------------ОСНОВНОЙ СЛАЙД----------*/
+
+.main-slide {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0;
+}
+
+.text-content {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+}
+
+.text-content__text {
+  display: flex;
+  flex-direction: column;
+}
+
+/*--------------СЕТКА 320---------------*/
+
+@media (max-width: 768px) {
+  .body-container {
+    min-width: 320px;
+  }
+
+  .header__contacts-side {
+    display: none;
+  }
+
+  .header__logo-side {
+    margin-left: 16px;
+  }
+
+  .header__repair-side {
+    margin-right: 16px;
+  }
+
+  /*Вертикальный разделитель слева от repair-side*/
+  .header__repair-side::before {
+    content: '';
+    height: 100%;
+    width: 8px;
+    background: url(../img/divider.svg) no-repeat left 50%;
+  }
+
+  .nav__item--hiden-320 {
+    display: none;
+  }
+
+  .repair-side--hidden {
+    display: none;
+  }
+
+  .main-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .main-slide__text-content {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .main-text {
+    display: none;
+  }
+  .text {
+    line-height: 18px;
+  }
+
+  .illustraton {
+    min-width: 320px;
+    overflow: hidden;
+  }
+  .illustraton__img {
+    width: 100%;
+    max-height: 250px;
+    padding-top: 20px;
+  }
+}
+
+/*--------------СЕТКА 768---------------*/
+
+@media (min-width: 768px) {
+  .logo-img {
+    padding-left: 22px;
+    background: url(../img/divider.svg) no-repeat left 50%;
+  }
+  .header__logo-side {
+    margin-left: 24px;
+  }
+  .header__repair-side {
+    margin-right: 24px;
+  }
+  /*Вертикальный разделитель слева от repair-side*/
+  .header__repair-side::before {
+    content: '';
+    height: 100%;
+    width: 8px;
+    background: url(../img/divider.svg) no-repeat left 50%;
+  }
+
+  .nav__item--hiden-320 {
+    display: none;
+  }
+
+  .header__contacts-side {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .repair-side--hidden {
+    display: none;
+  }
+
+  .main-slide {
+    width: 100%;
+    min-width: 768px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+
+  .text-content__text {
+    width: 312px;
+    height: 160px;
+
+    overflow: hidden;
+  }
+
+  .text-content {
+    padding-top: 10px;
+    padding-left: 16px;
+  }
+
+  .illustraton {
+    width: 360px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .illustraton__img {
+    width: 360px;
+    height: auto;
+    padding-top: 20px;
+  }
+
+  .main-text {
+    display: block;
+  }
+  .text {
+    line-height: 20px;
+  }
+}
+
+/*--------------СЕТКА 1120---------------*/
+@media (min-width: 1120px) {
+  .header {
+    display: none;
+  }
+
+  .title__repair-side {
+    margin-right: 32px;
+  }
+
+  .nav__item--hiden-320 {
+    display: block;
+  }
+
+  .nav__item--hiden-1120 {
+    display: none;
+  }
+
+  .nav {
+    padding-left: 24px;
+    overflow: visible;
+    flex-wrap: wrap;
+    width: 1063px;
+    height: 82px;
+    flex-shrink: 0;
+  }
+  .repair-side--hidden {
+    display: flex;
+    width: 380px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .circle-button--with-text {
+    display: flex;
+    align-items: center;
+
+    width: 173px;
+    background-position: right 50%;
+  }
+
+  .text-content__text {
+    width: 490px;
+    height: 160px;
+
+    overflow: hidden;
+  }
+  .text-content {
+    padding-right: 24px;
+  }
+  .illustraton {
+    width: 531px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .illustraton__img {
+    width: 531px;
+    height: auto;
+    padding-top: 20px;
+  }
+}

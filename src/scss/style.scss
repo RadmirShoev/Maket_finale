@@ -1,0 +1,11 @@
+@import './src/scss/fontstyle.scss';
+@import './mainstyle.scss';
+@import './brends-style.scss';
+@import './mobile-menu-style.scss';
+@import './circle-button.scss';
+
+$screen-xs: 320px;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 1120px;
+$screen-xl: 1440px;
