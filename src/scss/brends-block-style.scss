@@ -1,5 +1,13 @@
 .brends-block {
-  padding-bottom: 32px;
+  @media (min-width: $screen-xs) {
+    padding-bottom: 24px;
+  }
+  @media (min-width: $screen-md) {
+    padding-bottom: 32px;
+  }
+  @media (min-width: $screen-lg) {
+    padding-bottom: 50px;
+  }
 }
 
 .section-header {
@@ -8,6 +16,7 @@
     $background-gray 0%,
     $background-white 98.61%
   );
+
   height: 56px;
   display: flex;
   align-items: center;
@@ -157,6 +166,9 @@
     row-gap: 16px;
     align-content: start;
   }
+  .brends-list__brend {
+    width: 224px;
+  }
   .brends-list__item {
     width: 224px;
   }
@@ -165,7 +177,12 @@
   }
 }
 /*--------------СЕТКА 1120---------------*/
-@media (min-width: 1120px) {
+@media (min-width: $screen-xl) {
+  .brends-list {
+    padding-left: 32px;
+    column-gap: 32px;
+  }
+
   .for-pagination {
     display: none;
   }

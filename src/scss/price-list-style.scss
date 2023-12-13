@@ -1,0 +1,147 @@
+.for-swiper {
+  @media (min-width: $screen-md) {
+    & {
+      padding: 24px;
+    }
+  }
+  @media (min-width: $screen-lg) {
+    // c 1120px
+    & {
+      padding: 32px;
+    }
+  }
+}
+
+.price-list-block__price-list {
+  margin: 63px 24px 24px 24px;
+}
+
+.price-list {
+  margin: 0;
+  padding-top: 24px;
+  padding-left: 8px;
+  display: flex;
+
+  &__item {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item--first {
+    display: none;
+  }
+  &__card {
+    color: $text-main;
+    text-decoration: none;
+    padding: 0 16px;
+    margin: 0;
+
+    box-sizing: border-box;
+    width: 260px;
+    height: 200px;
+    background-color: $background-white;
+
+    border: 1px solid $brend-border;
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    position: relative;
+
+    .category {
+      color: $link-gray;
+      font-family: 'TT Lakes';
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+    }
+    .price-card__category {
+      margin-top: 16px;
+    }
+    .card-text {
+      color: $text-main;
+      font-family: 'TT Lakes';
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+    }
+
+    .price-card__card-text {
+      margin-top: 4px;
+    }
+
+    .price-card__button {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+    }
+  }
+
+  /*  Cетка с 768px  */
+  @media (min-width: $screen-md) {
+    & {
+      margin: 0;
+      padding: 0;
+
+      background-color: $background-white;
+      border-radius: 12px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+
+      &__item--first {
+        //Первая строчка прайс листа: Услуга Цена Срок
+        display: block;
+
+        .price-list__card {
+          background-color: $background-gray;
+          border: none;
+          grid-template-columns: 60% 1fr 2fr;
+
+          .price-card__button {
+            display: none;
+          }
+        }
+      }
+
+      &__card {
+        width: 100%;
+        height: 64px;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid $background-gray;
+
+        display: grid;
+        grid-template-columns: 60% 1fr 1fr 1fr;
+
+        .price-card__category {
+          display: none;
+        }
+        .card-text--first {
+          grid-column: 1/2;
+          margin: auto 0;
+        }
+        .card-text--second {
+          grid-column: 2/3;
+          margin: auto 0;
+        }
+        .card-text--third {
+          grid-column: 3/4;
+          margin: auto 0;
+        }
+        .price-card__button {
+          position: relative;
+          right: 0;
+          bottom: 0;
+          grid-column: 4/5;
+          margin: auto 0;
+        }
+      }
+    }
+  }
+}

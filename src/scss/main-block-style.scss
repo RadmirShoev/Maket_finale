@@ -14,7 +14,14 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 
-  @media (min-width: 1440px) {
+  //Центровка сайта от 1120px
+  @media (min-width: $screen-lg) {
+    max-width: $screen-lg;
+    margin: 0 auto;
+  }
+
+  //Включение Бокового мобильного меню при рамере 1440px
+  @media (min-width: $screen-xl) {
     .mobile-menu {
       position: relative;
       box-shadow: none;
@@ -25,7 +32,15 @@ body {
   min-width: 320px;
 }
 .main-block {
-  padding-bottom: 32px;
+  @media (min-width: $screen-xs) {
+    padding-bottom: 24px;
+  }
+  @media (min-width: $screen-md) {
+    padding-bottom: 32px;
+  }
+  @media (min-width: $screen-lg) {
+    padding-bottom: 50px;
+  }
 }
 
 .header {
@@ -83,7 +98,7 @@ body {
   /*сброс базовых стилей кнопок*/
   padding: 0;
   border: none;
-  font: inherit;
+  font-family: 'TT Lakes';
   color: inherit;
   background-color: transparent;
   cursor: pointer;
