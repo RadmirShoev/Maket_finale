@@ -53,6 +53,14 @@
     color: #1b1c21;
     align-self: center;
   }
+
+  &--with-text {
+    display: flex;
+    align-items: center;
+
+    width: 173px;
+    background-position: right 50%;
+  }
 }
 
 /*------------Подгружаем иконки кнопок----------*/

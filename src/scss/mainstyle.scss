@@ -5,20 +5,40 @@ html {
 body {
   padding: 0;
   margin: 0;
-  background-color: #f8f8f8;
+  background-color: $background-gray;
+}
+.main-blocks-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (min-width: 1440px) {
+    .mobile-menu {
+      position: relative;
+      box-shadow: none;
+    }
+  }
+}
+.blocks-without-menu {
+  min-width: 320px;
+}
+.main-block {
+  padding-bottom: 32px;
 }
 
 .header {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  border-bottom: 2px solid #d9fff5;
+  border-bottom: 2px solid $header-border;
 
   width: 100%;
   min-width: 320px;
   min-height: 88px;
 
-  background-color: #ffffff;
+  background-color: $background-white;
 }
 
 .header__contacts-side {
@@ -26,7 +46,7 @@ body {
 }
 
 .main-container {
-  background-color: #f8f8f8;
+  background-color: $background-gray;
   width: 100%;
   height: 100%;
 }
@@ -80,7 +100,7 @@ body {
   line-height: 24px;
   text-align: right;
   font-weight: 500;
-  color: #1b1c21;
+  color: $text-main;
   align-self: center;
 }
 
@@ -93,50 +113,98 @@ body {
   background: url(../img/highlight.svg) no-repeat left center;
   display: flex;
   justify-content: space-between;
-}
-.title__text {
-  font-size: 28px;
-  line-height: 40px;
-  text-align: right;
-  color: #1b1c21;
-  padding-left: 20px;
+
+  @media (min-width: 320px) {
+    &__repair-side {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &__repair-side {
+      margin-right: 32px;
+      display: flex;
+      width: 380px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    font-size: 28px;
+    line-height: 40px;
+    text-align: right;
+    color: $text-main;
+    padding-left: 32px;
+  }
 }
 
 /*-------------------НАВИГАЦИЯ по ссылкам----------------*/
 .nav {
   list-style-type: none; /*убирает точки элементов списка*/
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: nowrap;
-  padding-left: 16px;
+  padding-left: 32px;
   overflow-x: scroll;
-}
 
-.nav__item {
-  padding: 8px 12px;
-  min-width: fit-content;
+  @media (min-width: $screen-xs) {
+    &__item--hiden-320 {
+      display: none;
+    }
+  }
 
-  display: flex;
-  align-items: center;
-}
+  @media (min-width: $screen-md) {
+    &__item--hiden-320 {
+      display: none;
+    }
+  }
 
-.nav__link {
-  color: #7e7e82;
-  text-decoration: inherit;
-  font-family: 'TT Lakes';
-  font-size: 16px;
-  line-height: 24px;
-  text-align: left;
-}
+  @media (min-width: $screen-xl) {
+    & {
+      padding-left: 24px;
+      overflow: visible;
+      flex-wrap: wrap;
+      width: 1063px;
+      height: 82px;
+      flex-shrink: 0;
+    }
 
-.nav__item--selected {
-  border: 2px solid #b8ffec;
-  border-radius: 5px;
-  background-color: #ffffff;
-}
+    &__item--hiden-320 {
+      display: none;
+    }
 
-.nav__link:hover {
-  color: black;
+    &__item--hiden-1120 {
+      display: none;
+    }
+  }
+
+  &__item {
+    padding: 8px 12px;
+    min-width: fit-content;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    color: $link-gray;
+    text-decoration: inherit;
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  &__item--selected {
+    border: 2px solid $link-border;
+    border-radius: 5px;
+    background-color: $background-white;
+  }
+
+  &__link:hover {
+    text-shadow: 0 0 1px $text-main;
+  }
 }
 
 /*-------------ОСНОВНОЙ СЛАЙД----------*/
@@ -161,10 +229,6 @@ body {
 /*--------------СЕТКА 320---------------*/
 
 @media (max-width: 768px) {
-  .body-container {
-    min-width: 320px;
-  }
-
   .header__contacts-side {
     display: none;
   }
@@ -183,14 +247,6 @@ body {
     height: 100%;
     width: 8px;
     background: url(../img/divider.svg) no-repeat left 50%;
-  }
-
-  .nav__item--hiden-320 {
-    display: none;
-  }
-
-  .repair-side--hidden {
-    display: none;
   }
 
   .main-slide {
@@ -244,17 +300,9 @@ body {
     background: url(../img/divider.svg) no-repeat left 50%;
   }
 
-  .nav__item--hiden-320 {
-    display: none;
-  }
-
   .header__contacts-side {
     display: flex;
     margin-left: auto;
-  }
-
-  .repair-side--hidden {
-    display: none;
   }
 
   .main-slide {
@@ -276,7 +324,7 @@ body {
 
   .text-content {
     padding-top: 10px;
-    padding-left: 16px;
+    padding-left: 32px;
   }
 
   .illustraton {
@@ -302,41 +350,6 @@ body {
 @media (min-width: 1120px) {
   .header {
     display: none;
-  }
-
-  .title__repair-side {
-    margin-right: 32px;
-  }
-
-  .nav__item--hiden-320 {
-    display: block;
-  }
-
-  .nav__item--hiden-1120 {
-    display: none;
-  }
-
-  .nav {
-    padding-left: 24px;
-    overflow: visible;
-    flex-wrap: wrap;
-    width: 1063px;
-    height: 82px;
-    flex-shrink: 0;
-  }
-  .repair-side--hidden {
-    display: flex;
-    width: 380px;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .circle-button--with-text {
-    display: flex;
-    align-items: center;
-
-    width: 173px;
-    background-position: right 50%;
   }
 
   .text-content__text {

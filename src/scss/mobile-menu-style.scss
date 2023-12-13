@@ -1,10 +1,4 @@
 /*-----------Общий блок для меню--------*/
-$screen-xs: 320px;
-$screen-sm: 576px;
-$screen-md: 768px;
-$screen-lg: 1120px;
-$screen-xl: 1440px;
-
 .mobile-menu {
   position: absolute;
   margin: 0;
@@ -14,24 +8,13 @@ $screen-xl: 1440px;
   top: 0;
   width: 320px;
   box-sizing: border-box;
-  height: 100%;
-  max-height: 1124px;
+  height: 100vh;
+  /*max-height: 1124px;*/
   background: #fff;
   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
     -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
 
-  color: #1b1c21;
-  font-family: 'TT Lakes';
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  color: $text-main;
 
   @media (min-width: $screen-xs) {
     display: none;
@@ -44,23 +27,33 @@ $screen-xl: 1440px;
   @media (min-width: $screen-xl) {
     display: flex;
   }
+
+  /*---------СТИЛИ ШАПКИ БОКОВОГО МЕНЮ------------*/
+  &__header {
+    width: 100%;
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+    &__logo-link {
+      display: inline-block;
+      margin-right: auto;
+    }
+  }
 }
 
-/*---------СТИЛИ ШАПКИ------------*/
-.mobile-menu__header {
-  width: 100%;
-  margin-top: 18px;
+.mobile-menu__container {
+  max-height: 888px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-}
-.header__logo-link {
-  display: inline-block;
-  margin-right: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 /*----------СТИЛИ МЕНЮ-------------------*/
+
 .item {
   /*сброс стилей элементов списка*/
   margin: 0;
@@ -71,7 +64,7 @@ $screen-xl: 1440px;
 .link {
   /*сброс стилей всех ссылок*/
   text-decoration: none;
-  color: #1b1c21;
+  color: $text-main;
 }
 
 .main-menu {
@@ -87,7 +80,7 @@ $screen-xl: 1440px;
   margin-top: 32px;
 }
 .main-menu__link--active {
-  color: #7e7e82;
+  color: $link-gray;
   pointer-events: none;
 }
 .main-menu__item--active {
@@ -98,7 +91,7 @@ $screen-xl: 1440px;
   pointer-events: none;
 }
 .main-menu__item:hover {
-  text-shadow: 0 0 5px #7e7e82;
+  text-shadow: 0 0 1px $link-gray;
 }
 
 /*--------------СТИЛИ ПОДВАЛА----------------*/
@@ -136,12 +129,12 @@ $screen-xl: 1440px;
   padding-top: 40px;
 }
 .lang-link--active {
-  color: #7e7e82;
+  color: $link-gray;
   pointer-events: none;
 }
 
 .lang-link:hover {
   display: block;
   transform: translatey(-5px);
-  text-shadow: 0 0 5px #7e7e82;
+  text-shadow: 0 0 5px $link-gray;
 }

@@ -14,8 +14,13 @@
   </head>
 
   <body>
+
+  <div class="main-blocks-container">
+
 <!--------------------БЛОК БОКОВОГО МЕЛЮ----------------->    
     <aside class="mobile-menu">
+        <div class ='mobile-menu__container'>
+
         <header class="mobile-menu__header">
             <button class="circle-button circle-button--close-img "> </button>
 
@@ -25,6 +30,7 @@
 
             <button class="circle-button circle-button--search-img "> </button>
         </header>
+        
         
         <nav>
             <ul class="main-menu mobile-menu__main-menu ">
@@ -62,11 +68,13 @@
 
         </footer>
 
+        </div>
     </aside>
 
+    <div class="blocks-without-menu">
     <!-------------------------------------БЛОК ОСНОВНОГО КОНТЕНТА---------------------------->
-
-    <div class="body-container">
+    
+    <div class="main-block">
 
       <header class="header">
         <!--Часть шапки с логотипом-->
@@ -119,7 +127,7 @@
         <div class="title">
           <h1 class="title__text">Услуги и Сервисы</h1>
 
-          <div class="title__repair-side repair-side repair-side--hidden">
+          <div class="title__repair-side repair-side">
             <button
               class="circle-button header__circle-button circle-button--with-text circle-button--repair-img"
             >
@@ -294,6 +302,7 @@
         </footer> 
     </div>
 
-
+    </div><!--Конец блока blocks-without-menu-->
+    </div> <!-- Конец глобального контейнера main-blocks-container -->
   </body>
 </html>
