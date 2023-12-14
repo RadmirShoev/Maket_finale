@@ -16,4 +16,9 @@
   border-radius: 16px;
 
   background: $button-ping url(../img/arroy-right.svg) no-repeat 90% center;
+
+  &:hover {
+    transform: scale(0.9);
+    transition-duration: 0.1s;
+  }
 }

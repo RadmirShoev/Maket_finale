@@ -18,8 +18,8 @@
   <div class="main-blocks-container">
 
 <!-----------------------------БЛОК БОКОВОГО МЕЛЮ------------------------->    
-    <aside class="mobile-menu">
-        <div class ='mobile-menu__container'>
+    <aside class="mobile-menu-block mobile-menu-block--hidden ">
+        <div class ='mobile-menu'><!--mobile-menu__container-->
 
         <header class="mobile-menu__header">
             <button class="circle-button circle-button--close-img "> </button>
@@ -31,7 +31,6 @@
             <button class="circle-button circle-button--search-img "> </button>
         </header>
         
-
         <nav>
             <ul class="main-menu mobile-menu__main-menu ">
                 <li class='item main-menu__item main-menu__item--active'><a href="" class='main-menu__link main-menu__link--active link'>Ремонт техники</a></li>
@@ -72,8 +71,8 @@
     </aside>
 
     <div class="blocks-without-menu">
+
     <!-------------------------БЛОК ОСНОВНОГО КОНТЕНТА-------------------->
-    
     <section class="main-block">
 
       <header class="header">
@@ -482,10 +481,98 @@
 
         <div class="for-pagination "></div> <!--  swiper-pagination  -->
 
-    </div>
-    </section>
+      </div>
+
+      <div class="price-info price-list-block__price-info">
+
+        <p class="price-info__text">
+          Все цены указаны с учетом НДС. Стоимость ремонта указана 
+          на единичную услугу. Для получения коммерческого предложения 
+          на постоянное обслуживание, оставьте заявку.
+        </p>
+
+        <button class="price-info__button">
+          Получить коммерческое предложение 
+        </button>
+
+      </div>
+
+    </section><!--Конец блока price-list-block -->
+
+    <!-------------------------ОСНОВНОЙ ПОДВАЛ--------------------------------->
+    <footer class="main-footer">
+      <p class="main-footer__first-text" >
+        © 2019 CPS<br>
+        Разработано командой Apesong 
+      </p>
+
+      <p class="main-footer__second-text">
+        Политика конфиденциальности
+      </p>
+
+      <p class="main-footer__third-text">
+        Информация, размещенная на данной странице, 
+        не является публичной офертой
+      </p>
+
+    </footer>
 
     </div><!--Конец блока blocks-without-menu-->
     </div> <!--Конец глобального контейнера main-blocks-container -->
+
+    <!-------------------------ФОРМА ОБРАТНОЙ СВЯЗИ--------------------------------->
+    <article class="feedback-block feedback-block--hidden">
+
+      <form class="feedback-form feedback-block__feedback-form" action="" method="get">
+
+        <button class="circle-button circle-button--close-img"> </button>
+
+        <div class="title">
+          <h3 class="title__text">Обратная связь</h3>
+        </div>
+
+        <input class="feedback-form__input input-name" type="text" value="" placeholder="Имя">
+        <input class="feedback-form__input input-tel" type="tel" value="" placeholder="Телефон">
+        <input class="feedback-form__input input-email" type="email" value="" placeholder="Электронная почта">
+
+        <textarea class="feedback-form__input input-message" placeholder="Сообщение" rows="4"></textarea>
+        
+        <p class="feedback-form__text">
+          Нажимая “отправить”, вы даете согласие на 
+          <a class="link-ping">обработку персональных данных</a> и 
+          соглашаетесь с нашей 
+          <a class="link-ping">политикой конфиденциальности</a>
+        </p>
+
+        <input class="form-button feedback-form__form-button" type="submit" value="ОТПРАВИТЬ">
+
+      </form>
+    </article>
+
+    <!-------------------------ФОРМА ЗВОНКА--------------------------------->
+    <article class="call-block call-block--hidden">
+
+      <form class="call-form call-block__call-form" action="" method="get">
+
+        <button class="circle-button circle-button--close-img"> </button>
+
+        <div class="title">
+          <h3 class="title__text">Заказать звонок</h3>
+        </div>
+
+        <input class="call-form__input input-tel" type="tel" value="" placeholder="Телефон">
+        
+        <p class="call-form__text">
+          Нажимая “отправить”, вы даете согласие на 
+          <a class="link-ping">обработку персональных данных</a> и 
+          соглашаетесь с нашей 
+          <a class="link-ping">политикой конфиденциальности</a>
+        </p>
+
+        <input class="form-button call-form__form-button" type="submit" value="ОТПРАВИТЬ">
+
+      </form>
+
+    </article>
   </body>
 </html>

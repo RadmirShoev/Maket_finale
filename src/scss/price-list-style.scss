@@ -1,21 +1,19 @@
 .for-swiper {
   @media (min-width: $screen-md) {
+    //Отступы с 768px
     & {
       padding: 24px;
     }
   }
   @media (min-width: $screen-lg) {
+    //отступы с 1120рх
     // c 1120px
     & {
       padding: 32px;
     }
   }
 }
-
-.price-list-block__price-list {
-  margin: 63px 24px 24px 24px;
-}
-
+/*ПРАЙСЛ ЛИСТ*/
 .price-list {
   margin: 0;
   padding-top: 24px;
@@ -80,7 +78,7 @@
     }
   }
 
-  /*  Cетка с 768px  */
+  /*  ГРИД Cетка с 768px и выше  */
   @media (min-width: $screen-md) {
     & {
       margin: 0;
@@ -142,6 +140,62 @@
           margin: auto 0;
         }
       }
+    }
+  }
+}
+
+/*ТЕКСТ ПОД ПРАЙС ЛИСТОМ*/
+.price-info {
+  padding-left: 16px;
+  padding-bottom: 40px;
+
+  @media (min-width: $screen-md) {
+    //Отступы с 768px
+    & {
+      padding-left: 24px;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    //отступы с 1120рх
+    & {
+      padding-left: 32px;
+    }
+  }
+
+  &__text {
+    width: 421px;
+
+    color: $text-main;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+
+  &__button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+
+    color: $text-main;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+
+    padding-right: 24px;
+    background: url(../img/arroy-right-ping.svg) no-repeat right center;
+
+    &:hover {
+      transform: translateX(5px);
+      font-style: italic;
     }
   }
 }
