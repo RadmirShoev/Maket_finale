@@ -1,10 +1,16 @@
-/*---------------ОСНОВНАЯ ПРОГРАММА СО СВАЙПЕРОМ------------*/
+//Переменные Блоков
+let brendsBlock = document.querySelector('.brends-block')
+let devicesBlock = document.querySelector('.devices-block')
+let priceListBlock = document.querySelector('.price-list-block')
+
+let showPartBrends = 'brends-list--show-part'
+let showPartDevices = 'devices-list--show-part'
+let showPartPrices
 
 //Функция добавления классов свайпера
-
-function addSwiperClasses() {
+function addSwiperClasses(block, showPart) {
   //Находим основные контейнеры для элементов Свайпера
-  let containerForSwiper = document.querySelector('.for-swiper')
+  let containerForSwiper = block.querySelector('.for-swiper')
   let wrapper = containerForSwiper.querySelector('.for-wrapper')
 
   //Находим слайды и пагинацию
@@ -21,7 +27,7 @@ function addSwiperClasses() {
 
   forPagination.classList.add('swiper-pagination')
 
-  wrapper.classList.remove('brends-list--show-part')
+  wrapper.classList.remove(showPart)
 }
 
 // Запускаем СВАЙПЕР//
@@ -38,13 +44,13 @@ let swiperInit = function () {
     }
   })
 
-  return swiper
+  // return swiper
 }
 
 //Функция удаления классов свайпера
-let deleteSwiperClasses = () => {
+let deleteSwiperClasses = (block, showPart) => {
   //Находим основные контейнеры для элементов Свайпера
-  let containerForSwiper = document.querySelector('.for-swiper')
+  let containerForSwiper = block.querySelector('.for-swiper')
   let wrapper = containerForSwiper.querySelector('.for-wrapper')
 
   //Находим слайды и пагинацию
@@ -66,7 +72,7 @@ let deleteSwiperClasses = () => {
   forPagination.classList.remove('swiper-pagination-bullets')
   forPagination.classList.remove('swiper-pagination-horizontal')
 
-  wrapper.classList.add('brends-list--show-part')
+  wrapper.classList.add(showPart)
 }
 
 //Проеврка изначальной ширины окна
@@ -76,25 +82,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (windowWidth < 768) {
     console.log('Включаем свайпер при начальной ширине < 768')
-    addSwiperClasses()
-    let globalSwiper = swiperInit()
+    addSwiperClasses(brendsBlock, showPartBrends)
+    addSwiperClasses(devicesBlock, showPartDevices)
+    /* addSwiperClasses(priceListBlock)*/
+    swiperInit()
   } else {
     console.log('Начальная ширина > 768 Свайпер не нужен')
-    console.log('Свайпер не нужен')
   }
 })
 
 // Запуск свайпера при РЕСАЙЗЕ
-window.addEventListener('resize', function () {
+/* window.addEventListener('resize', function () {
   let windowWidth = document.documentElement.clientWidth
 
   console.log('Включаем свайпер при ресайзе')
 
-  addSwiperClasses()
+  addSwiperClasses(brendsBlock, showPartBrends)
+  addSwiperClasses(devicesBlock, showPartDevices)
+  addSwiperClasses(priceListBlock)
+
   let globalSwiper = swiperInit()
 
   if (windowWidth >= 768) {
-    deleteSwiperClasses()
-    globalSwiper.destroy()
+    deleteSwiperClasses(brendsBlock, showPartBrends)
+    deleteSwiperClasses(devicesBlock, showPartDevices)
+    /*deleteSwiperClasses(priceListBlock)*/
+
+/*globalSwiper.destroy()
   }
-})
+})*/

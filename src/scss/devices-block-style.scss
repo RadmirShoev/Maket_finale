@@ -1,18 +1,23 @@
 .devices-block {
   @media (min-width: $screen-xs) {
-    padding-bottom: 24px;
+    & {
+      padding-bottom: 24px;
+    }
   }
   @media (min-width: $screen-md) {
-    padding-bottom: 32px;
+    & {
+      padding-bottom: 32px;
+    }
   }
   @media (min-width: $screen-lg) {
-    padding-bottom: 50px;
+    & {
+      padding-bottom: 50px;
+    }
   }
 }
 
 .devices-list {
   margin: 0;
-  padding-top: 24px;
   padding-left: 32px;
   display: flex;
   justify-content: flex-start;
@@ -21,33 +26,47 @@
   row-gap: 16px;
 
   /*сетка от 320px*/
-  @media (min-width: $screen-md) {
-    .devices-list {
-      padding-left: 16px;
+  @media (min-width: $screen-xs) {
+    & {
+      margin: 0;
+      width: 100%;
+      padding-left: 0;
+      margin-top: 30px;
       column-gap: 0;
+      row-gap: 0;
+      flex-wrap: nowrap;
     }
 
     &__device-card {
       width: 240px;
     }
   }
-  /*Сетка от 768px до 1120px*/
-  @media (min-width: $screen-md) and (max-width: $screen-lg) {
-    .devices-list {
+  /*Сетка от 768px */
+  @media (min-width: $screen-md) {
+    & {
+      margin: 0;
       padding-left: 24px;
       column-gap: 24px;
+      row-gap: 16px;
       overflow: hidden;
+      flex-wrap: wrap;
     }
-    .devices-list__device-card {
+    &__device-card {
       width: 224px;
     }
   }
-  /*Сетка от 1440px*/
-  @media (min-width: $screen-xl) {
-    .devices-list {
+  /*Сетка от 1120px*/
+  @media (min-width: $screen-lg) {
+    & {
+      margin: 0;
       padding-left: 32px;
-      column-gap: 32px;
-      padding-bottom: 50px;
+      column-gap: 16px;
+      row-gap: 16px;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    &__device-card {
+      width: 240px;
     }
   }
 
@@ -68,7 +87,7 @@
     flex-wrap: nowrap;
 
     box-sizing: border-box;
-    width: 240px;
+    /*width: 240px;*/
     height: 160px;
     background-color: $background-white;
 

@@ -15,10 +15,10 @@ body {
   margin: 0 auto;
 
   //Центровка сайта от 1120px
-  @media (min-width: $screen-lg) {
+  /* @media (min-width: $screen-lg) {
     max-width: $screen-lg;
     margin: 0 auto;
-  }
+  }*/
 
   //Включение Бокового мобильного меню при рамере 1440px
   @media (min-width: $screen-xl) {
@@ -98,37 +98,6 @@ body {
   gap: 16px;
 }
 
-/*-----------------------КНОПКА ЧИТАТЬ ДАЛЕЕ----------------*/
-
-.read-more-button {
-  /*сброс базовых стилей кнопок*/
-  padding: 0;
-  border: none;
-  font-family: 'TT Lakes';
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
-
-  /*сброс стиля фокуса*/
-  outline: none;
-
-  background: url(../img/read-more-close.svg) no-repeat left center;
-  width: 140px;
-  height: 24px;
-  display: block;
-
-  font-size: 16px;
-  line-height: 24px;
-  text-align: right;
-  font-weight: 500;
-  color: $text-main;
-  align-self: center;
-}
-
-.text-content__read-more-button {
-  margin-top: 10px;
-}
-
 /*----ЗАГОЛОВОК----*/
 .title {
   width: 100%;
@@ -143,7 +112,7 @@ body {
     }
   }
 
-  @media (min-width: $screen-lg) {
+  @media (min-width: $screen-xl) {
     &__repair-side {
       margin-right: 32px;
       display: flex;
@@ -191,7 +160,7 @@ body {
     }
   }
 
-  @media (min-width: $screen-lg) {
+  @media (min-width: $screen-xl) {
     & {
       padding-left: 32px;
       padding-right: 32px;
@@ -233,6 +202,7 @@ body {
     border: 2px solid $link-border;
     border-radius: 5px;
     background-color: $background-white;
+    pointer-events: none;
   }
 
   &__link:hover {
@@ -246,6 +216,21 @@ body {
   display: flex;
   justify-content: space-between;
 
+  .text-content {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+    &__text--show-part {
+      height: 90px;
+      overflow: hidden;
+    }
+  }
   /*--------------СЕТКА 320---------------*/
   @media (min-width: $screen-xs) {
     & {
@@ -260,9 +245,6 @@ body {
       padding-left: 16px;
     }
 
-    .main-text {
-      display: none;
-    }
     .text {
       line-height: 18px;
     }
@@ -289,7 +271,7 @@ body {
       align-items: flex-start;
     }
 
-    .text-content__text {
+    .text-content__text--show-part {
       height: 160px;
       overflow: hidden;
     }
@@ -308,22 +290,20 @@ body {
       height: auto;
       padding-top: 20px;
     }
-
-    .main-text {
+    /* .main-text {
       display: block;
-    }
+    }*/
     .text {
       line-height: 20px;
     }
   }
   /*--------------СЕТКА 1120---------------*/
   @media (min-width: $screen-lg) {
-    .text-content__text {
+    .text-content__text--show-part {
       height: 160px;
       overflow: hidden;
     }
     .text-content {
-      /*padding-right: 24px;*/
       width: 44%;
     }
     .illustraton {
@@ -339,19 +319,7 @@ body {
   }
 }
 
-.text-content {
-  font-size: 14px;
-  line-height: 20px;
-  text-align: left;
-}
-
-.text-content__text {
-  display: flex;
-  flex-direction: column;
-}
-
 /*--------------СЕТКА 320---------------*/
-
 @media (min-width: $screen-xs) {
   .header__contacts-side {
     display: none;
@@ -400,8 +368,8 @@ body {
     margin-left: auto;
   }
 
-  /*--------------СЕТКА 1120---------------*/
-  @media (min-width: $screen-lg) {
+  /*--------------СЕТКА 1440---------------*/
+  @media (min-width: $screen-xl) {
     .header {
       display: none;
     }
