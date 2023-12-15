@@ -5,7 +5,7 @@ let priceListBlock = document.querySelector('.price-list-block')
 
 let showPartBrends = 'brends-list--show-part'
 let showPartDevices = 'devices-list--show-part'
-let showPartPrices
+let showPartPrices = 'empy-class'
 
 //Функция добавления классов свайпера
 function addSwiperClasses(block, showPart) {
@@ -44,7 +44,7 @@ let swiperInit = function () {
     }
   })
 
-  // return swiper
+  return swiper
 }
 
 //Функция удаления классов свайпера
@@ -84,7 +84,8 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('Включаем свайпер при начальной ширине < 768')
     addSwiperClasses(brendsBlock, showPartBrends)
     addSwiperClasses(devicesBlock, showPartDevices)
-    /* addSwiperClasses(priceListBlock)*/
+    addSwiperClasses(priceListBlock, showPartPrices)
+
     swiperInit()
   } else {
     console.log('Начальная ширина > 768 Свайпер не нужен')
@@ -92,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 // Запуск свайпера при РЕСАЙЗЕ
-/* window.addEventListener('resize', function () {
+window.addEventListener('resize', function () {
   let windowWidth = document.documentElement.clientWidth
 
   console.log('Включаем свайпер при ресайзе')
@@ -106,8 +107,8 @@ document.addEventListener('DOMContentLoaded', function () {
   if (windowWidth >= 768) {
     deleteSwiperClasses(brendsBlock, showPartBrends)
     deleteSwiperClasses(devicesBlock, showPartDevices)
-    /*deleteSwiperClasses(priceListBlock)*/
+    deleteSwiperClasses(priceListBlock, showPartPrices)
 
-/*globalSwiper.destroy()
+    globalSwiper.destroy()
   }
-})*/
+})

@@ -18,7 +18,7 @@
 
 .devices-list {
   margin: 0;
-  padding-left: 32px;
+  padding-left: 0;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -45,7 +45,6 @@
   @media (min-width: $screen-md) {
     & {
       margin: 0;
-      padding-left: 24px;
       column-gap: 24px;
       row-gap: 16px;
       overflow: hidden;
@@ -59,7 +58,7 @@
   @media (min-width: $screen-lg) {
     & {
       margin: 0;
-      padding-left: 32px;
+      padding-left: 0;
       column-gap: 16px;
       row-gap: 16px;
       flex-wrap: wrap;

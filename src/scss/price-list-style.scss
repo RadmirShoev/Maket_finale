@@ -16,7 +16,7 @@
 .price-list {
   margin: 0;
   padding-top: 24px;
-  padding-left: 8px;
+  padding-left: 0;
   display: flex;
 
   &__item {
@@ -83,7 +83,7 @@
       margin: 0;
       padding: 0;
 
-      background-color: $background-white;
+      background-color: $background-gray;
       border-radius: 12px;
 
       display: flex;
