@@ -14,6 +14,12 @@
     transform: scale(0.9);
     transition-duration: 0.1s;
   }
+
+  &--none {
+    // для исчезания кнопки бургера при открытии бокового меню
+    display: none;
+  }
+
   /*------------Подгружаем иконки кнопок----------*/
 
   &--burger-img {
@@ -61,35 +67,3 @@
     background-position: right 50%;
   }
 }
-
-/*------------Подгружаем иконки кнопок----------*/
-/*
-.circle-button--burger-img {
-  background: url(../img/burger.svg) no-repeat center center;
-}
-.circle-button--close-img {
-  background: url(../img/close.svg) no-repeat center center;
-}
-.circle-button--call-img {
-  background: url(../img/call.svg) no-repeat center center;
-}
-.circle-button--chat-img {
-  background: url(../img/chat.svg) no-repeat center center;
-}
-.circle-button--profile-img {
-  background: url(../img/profile.svg) no-repeat center center;
-}
-.circle-button--search-img {
-  background: url(../img/search.svg) no-repeat center center;
-}
-.circle-button--arroy-img {
-  background: url(../img/brends/arroy.svg) no-repeat center center;
-}
-.circle-button--repair-img {
-  background: url(../img/repair.svg) no-repeat center center;
-}
-
-.circle-button--checkstatus-img {
-  background: url(../img/checkstatus.svg) no-repeat center center;
-}
-*/

@@ -1,9 +1,10 @@
 // Переменные  блоков
-let mainBlock = document.querySelector('.main-block')
+let mainBlock = document.querySelector('.header')
 let mobileMenu = document.querySelector('.mobile-menu')
 
 // Переменные Формы обратной связи
 let callForm = document.querySelector('.call-block')
+let callMuteArea = callForm.querySelector('.call-block__mute-area')
 
 let mainCallButton = mainBlock.querySelector('.circle-button--call-img')
 let mobileCallButton = mobileMenu.querySelector('.circle-button--call-img')
@@ -40,4 +41,8 @@ callForm.addEventListener('keydown', function (evt) {
   if (evt.key === 'Escape') {
     callForm.classList.add('call-block--hidden')
   }
+})
+//Событие ЗАКРЫТИЕ формы по клику на заблюреную область
+callMuteArea.addEventListener('click', function () {
+  callForm.classList.add('call-block--hidden')
 })

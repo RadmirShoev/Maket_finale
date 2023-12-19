@@ -27,6 +27,8 @@
   display: flex;
   align-items: center;
 
+  border-top: 1px solid $link-border;
+
   &__title {
     color: $link-gray;
     font-family: 'TT Lakes', 'Open Sans', 'Arial', sans-serif;
