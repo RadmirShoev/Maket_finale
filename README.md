@@ -1,3 +1,6 @@
+https://radmirshoev.github.io/Maket_finale/ Макет на GitHub Pages
+
+
 # Webpack Static Site Starter Kit
 
 ## Требования к проекту
