@@ -67,11 +67,9 @@
         </div>
     </aside>
 
-    <div class="blocks-without-menu">
+    <main class="blocks-without-menu">
 
     
-    <section class="main-block">
-
       <header class="header">
         
         <div class="logo-side header__logo-side">
@@ -104,10 +102,11 @@
           </button>
         </div>
       </header>
-
+      
+      <section class="main-block">
       
 
-      <main class="main-container">
+      <div class="main-container">
         <div class="title">
           <h1 class="title__text">Услуги и Сервисы</h1>
 
@@ -171,7 +170,7 @@
             <img src="./img/main_img.png" alt="Вывеска логотипа CPS" class="illustraton__img">
           </div>
         </section>
-      </main>
+      </div> 
     </section>
 
     
@@ -498,25 +497,27 @@
 
     </footer>
 
-    </div>
-    </div> 
+  </main>
+  </div> 
 
     
-    <article class="feedback-block feedback-block--hidden">
+    <aside class="feedback-block feedback-block--hidden">
+
+      <div class="feedback-block__mute-area">
+        <button class="circle-button feedback-block__close-button circle-button--close-img"> </button>
+      </div>
 
       <form class="feedback-form feedback-block__feedback-form" action="" method="get">
-
-        <button class="circle-button circle-button--close-img"> </button>
 
         <div class="title">
           <h3 class="title__text">Обратная связь</h3>
         </div>
 
-        <input class="feedback-form__input input-name" type="text" value="" placeholder="Имя">
-        <input class="feedback-form__input input-tel" type="tel" value="" placeholder="Телефон">
-        <input class="feedback-form__input input-email" type="email" value="" placeholder="Электронная почта">
+        <input class="feedback-form__input input-name" type="text" value="" placeholder="Имя" required>
+        <input class="feedback-form__input input-tel" type="tel" value="" placeholder="Телефон" required>
+        <input class="feedback-form__input input-email" type="email" value="" placeholder="Электронная почта" required>
 
-        <textarea class="feedback-form__input input-message" placeholder="Сообщение" rows="4"></textarea>
+        <textarea class="feedback-form__input input-message" placeholder="Сообщение" rows="4" required></textarea>
         
         <p class="feedback-form__text">
           Нажимая “отправить”, вы даете согласие на 
@@ -528,20 +529,22 @@
         <input class="form-button feedback-form__form-button" type="submit" value="ОТПРАВИТЬ">
 
       </form>
-    </article>
+    </aside>
 
     
-    <article class="call-block call-block--hidden">
+    <aside class="call-block call-block--hidden">
+
+      <div class="call-block__mute-area">
+        <button class="circle-button call-block__close-button circle-button--close-img"> </button>
+      </div>
 
       <form class="call-form call-block__call-form" action="" method="get">
-
-        <button class="circle-button circle-button--close-img"> </button>
 
         <div class="title">
           <h3 class="title__text">Заказать звонок</h3>
         </div>
 
-        <input class="call-form__input input-tel" type="tel" value="" placeholder="Телефон">
+        <input class="call-form__input input-tel" type="tel" value="" placeholder="Телефон" required>
         
         <p class="call-form__text">
           Нажимая “отправить”, вы даете согласие на 
@@ -554,6 +557,6 @@
 
       </form>
 
-    </article>
+    </aside>
   <script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>
