@@ -7,18 +7,30 @@ body {
   margin: 0;
   background-color: $background-gray;
 }
+button {
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  font-family: 'TT Lakes';
+}
+a {
+  text-decoration: inherit;
+  color: $text-main;
+}
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .main-blocks-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
   max-width: 1440px;
   margin: 0 auto;
-
-  //Центровка сайта от 1120px
-  /* @media (min-width: $screen-lg) {
-    max-width: $screen-lg;
-    margin: 0 auto;
-  }*/
 
   //Включение Бокового мобильного меню при рамере 1440px
   @media (min-width: $screen-xl) {
@@ -141,7 +153,6 @@ body {
 
 /*-------------------НАВИГАЦИЯ по ссылкам----------------*/
 .nav {
-  list-style-type: none; /*убирает точки элементов списка*/
   display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
@@ -199,8 +210,6 @@ body {
 
   &__link {
     color: $link-gray;
-    text-decoration: inherit;
-    font-family: 'TT Lakes';
     font-size: 16px;
     line-height: 24px;
     text-align: left;

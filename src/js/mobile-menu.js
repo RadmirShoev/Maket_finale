@@ -1,6 +1,9 @@
 // Переменные  блоков
 let mainBlock = document.querySelector('.header')
 let mobileMenu = document.querySelector('.mobile-menu-block')
+let mobileMenuMuteArea = mobileMenu.querySelector(
+  '.mobile-menu-block__mute-area'
+)
 
 // Переменные кнопок
 let mainBurgerButton = mainBlock.querySelector('.circle-button--burger-img')
@@ -41,4 +44,9 @@ mobileMenu.addEventListener('keydown', function (evt) {
     mobileMenu.classList.add('mobile-menu-block--hidden')
     mainBurgerButton.classList.remove('circle-button--none')
   }
+})
+//Событие ЗАКРЫТИЕ Клик по заблюреной области
+mobileMenuMuteArea.addEventListener('click', function () {
+  mobileMenu.classList.add('mobile-menu-block--hidden')
+  mainBurgerButton.classList.remove('circle-button--none')
 })

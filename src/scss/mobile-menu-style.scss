@@ -3,6 +3,16 @@
   height: 2100px;
   background: $background-white;
 
+  &__mute-area {
+    //новое
+    min-width: 320px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+  }
+
   // Сетка от 768px и выше
   @media (min-width: $screen-md) {
     & {
@@ -15,6 +25,16 @@
 
       box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
         -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+
+      display: grid; //новое
+      grid-template-columns: 320px 1fr;
+
+      &__mute-area {
+        grid-column: 2/3;
+        width: 100%;
+        max-width: 100%;
+        height: 100vh;
+      } //новое
     }
   }
 
@@ -26,6 +46,10 @@
       position: relative;
       top: 0px;
       display: block;
+
+      &__mute-area {
+        display: none;
+      }
     }
   }
 
@@ -102,19 +126,6 @@
 }
 
 /*----------СТИЛИ МЕНЮ-------------------*/
-
-.item {
-  /*сброс стилей элементов списка*/
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.link {
-  /*сброс стилей всех ссылок*/
-  text-decoration: none;
-  color: $text-main;
-}
 
 .main-menu {
   margin: 0;
