@@ -31,16 +31,29 @@ body {
   margin: 0;
   background-color: #f8f8f8; }
 
+button {
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  font-family: 'TT Lakes'; }
+
+a {
+  text-decoration: inherit;
+  color: #1b1c21; }
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
 .main-blocks-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
   max-width: 1440px;
-  margin: 0 auto;
-  /* @media (min-width: $screen-lg) {
-    max-width: $screen-lg;
-    margin: 0 auto;
-  }*/ }
+  margin: 0 auto; }
   @media (min-width: 1440px) {
     .main-blocks-container .mobile-menu-block {
       display: block;
@@ -130,8 +143,6 @@ body {
 
 /*-------------------НАВИГАЦИЯ по ссылкам----------------*/
 .nav {
-  list-style-type: none;
-  /*убирает точки элементов списка*/
   display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
@@ -168,8 +179,6 @@ body {
     align-items: center; }
   .nav__link {
     color: #7e7e82;
-    text-decoration: inherit;
-    font-family: 'TT Lakes';
     font-size: 16px;
     line-height: 24px;
     text-align: left; }
@@ -344,9 +353,6 @@ body {
   overflow: hidden; }
 
 .brends-list__item {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   width: 240px; }
 
 .brends-list__brend {
@@ -422,6 +428,13 @@ body {
   width: 320px;
   height: 2100px;
   background: #fff; }
+  .mobile-menu-block__mute-area {
+    min-width: 320px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 1; }
   @media (min-width: 768px) {
     .mobile-menu-block {
       width: 100%;
@@ -430,14 +443,23 @@ body {
       overflow: hidden;
       position: fixed;
       top: 0px;
-      box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02); } }
+      box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+      display: grid;
+      grid-template-columns: 320px 1fr; }
+      .mobile-menu-block__mute-area {
+        grid-column: 2/3;
+        width: 100%;
+        max-width: 100%;
+        height: 100vh; } }
   @media (min-width: 1440px) {
     .mobile-menu-block {
       width: 320px;
       height: 2100px;
       position: relative;
       top: 0px;
-      display: block; } }
+      display: block; }
+      .mobile-menu-block__mute-area {
+        display: none; } }
   .mobile-menu-block--hidden {
     display: none; }
 
@@ -486,17 +508,6 @@ body {
       margin-right: auto; }
 
 /*----------СТИЛИ МЕНЮ-------------------*/
-.item {
-  /*сброс стилей элементов списка*/
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-.link {
-  /*сброс стилей всех ссылок*/
-  text-decoration: none;
-  color: #1b1c21; }
-
 .main-menu {
   margin: 0;
   padding: 0; }
@@ -619,10 +630,6 @@ body {
       overflow: hidden; }
     .devices-list__device-card {
       width: 240px; } }
-  .devices-list__item {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
   .devices-list__device-card {
     color: #1b1c21;
     text-decoration: none;
@@ -659,15 +666,8 @@ body {
   padding-left: 0;
   display: flex;
   /*  ГРИД Cетка с 768px и выше  */ }
-  .price-list__item {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-  .price-list__item--first {
-    display: none; }
   .price-list__card {
     color: #1b1c21;
-    text-decoration: none;
     padding: 0 16px;
     margin: 0;
     box-sizing: border-box;
@@ -682,25 +682,20 @@ body {
     position: relative; }
     .price-list__card .category {
       color: #7e7e82;
-      font-family: 'TT Lakes';
+      opacity: 0.7218;
       font-size: 14px;
       font-style: normal;
       font-weight: 500; }
     .price-list__card .price-card__category {
       margin-top: 16px; }
-    .price-list__card .card-text {
-      color: #1b1c21;
-      font-family: 'TT Lakes';
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      letter-spacing: 0.2px; }
     .price-list__card .price-card__card-text {
       margin-top: 4px; }
     .price-list__card .price-card__button {
       position: absolute;
       right: 16px;
       bottom: 16px; }
+  .price-list__item--first {
+    display: none; }
   @media (min-width: 768px) {
     .price-list {
       margin: 0;
@@ -766,11 +761,7 @@ body {
   .price-info__button {
     padding: 0;
     border: none;
-    font: inherit;
-    color: inherit;
     background-color: transparent;
-    cursor: pointer;
-    outline: none;
     color: #1b1c21;
     font-size: 16px;
     font-style: normal;
@@ -1008,11 +999,6 @@ body {
 .circle-button {
   padding: 0;
   border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
-  outline: none;
   width: 40px;
   height: 40px;
   /*------------Подгружаем иконки кнопок----------*/ }
@@ -1056,22 +1042,17 @@ body {
   /*сброс базовых стилей кнопок*/
   padding: 0;
   border: none;
-  font-family: 'TT Lakes';
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
-  /*сброс стиля фокуса*/
-  outline: none;
   background: url(./static/read-more-close.svg) no-repeat left center;
   width: 140px;
   height: 24px;
   display: block;
   font-size: 16px;
   line-height: 24px;
-  text-align: right;
   font-weight: 500;
   color: #1b1c21;
-  align-self: center; }
+  align-self: center;
+  text-align: left;
+  padding-left: 20px; }
 
 .read-more-button--open {
   background: url(./static/read-more-open.svg) no-repeat left center; }
@@ -1095,8 +1076,6 @@ body {
 .form-button {
   padding-left: 12px;
   padding-right: 8px;
-  cursor: pointer;
-  font-family: 'TT Lakes';
   font-size: 12px;
   line-height: 24px;
   letter-spacing: -0.15000000596046448px;
