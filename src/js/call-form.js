@@ -1,6 +1,7 @@
 // Переменные  блоков
 let mainBlock = document.querySelector('.header')
-let mobileMenu = document.querySelector('.mobile-menu')
+let mobileMenu = document.querySelector('.mobile-menu-block')
+let mainBurgerButton = mainBlock.querySelector('.circle-button--burger-img')
 
 // Переменные Формы обратной связи
 let callForm = document.querySelector('.call-block')
@@ -31,6 +32,10 @@ mobileCallButton.addEventListener('click', function () {
       callForm.classList.remove('call-block--hidden')
     }
   }
+
+  mobileMenu.classList.add('mobile-menu-block--hidden')
+  mainBurgerButton.classList.remove('circle-button--none')
+  console.log('Закрытие меню')
 })
 //Событие ЗАКРЫТИЕ формы кнопкой
 callFormCloseButton.addEventListener('click', function () {

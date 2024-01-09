@@ -109,6 +109,6 @@ window.addEventListener('resize', function () {
     deleteSwiperClasses(devicesBlock, showPartDevices)
     deleteSwiperClasses(priceListBlock, showPartPrices)
 
-    globalSwiper.destroy()
+    /*globalSwiper.destroy()*/
   }
 })

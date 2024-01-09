@@ -24,7 +24,6 @@
   flex-wrap: wrap;
   column-gap: 32px;
   row-gap: 16px;
-
   /*сетка от 320px*/
   @media (min-width: $screen-xs) {
     & {

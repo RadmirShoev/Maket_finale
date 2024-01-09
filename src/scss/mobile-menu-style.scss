@@ -2,6 +2,7 @@
   width: 320px;
   height: 2100px;
   background: $background-white;
+  z-index: 1;
 
   &__mute-area {
     //новое
@@ -59,7 +60,6 @@
 }
 
 .mobile-menu {
-  position: absolute;
   margin: 0;
   padding-left: 24px;
   padding-right: 24px;
@@ -85,12 +85,14 @@
     & {
       min-width: 320px;
       width: 100%;
+      position: fixed;
     }
   }
 
   @media (min-width: $screen-md) {
     & {
       width: 320px;
+      position: relative;
     }
   }
 
@@ -98,6 +100,7 @@
     & {
       display: flex;
       box-shadow: none;
+      position: relative;
 
       .circle-button--close-img {
         display: none;
