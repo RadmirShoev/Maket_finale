@@ -53,7 +53,8 @@ li {
   display: flex;
   justify-content: space-between;
   max-width: 1440px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
   @media (min-width: 1440px) {
     .main-blocks-container .mobile-menu-block {
       display: block;
@@ -427,7 +428,8 @@ li {
 .mobile-menu-block {
   width: 320px;
   height: 2100px;
-  background: #fff; }
+  background: #fff;
+  z-index: 1; }
   .mobile-menu-block__mute-area {
     min-width: 320px;
     width: 100%;
@@ -464,7 +466,6 @@ li {
     display: none; }
 
 .mobile-menu {
-  position: absolute;
   margin: 0;
   padding-left: 24px;
   padding-right: 24px;
@@ -484,14 +485,17 @@ li {
   @media (min-width: 320px) {
     .mobile-menu {
       min-width: 320px;
-      width: 100%; } }
+      width: 100%;
+      position: fixed; } }
   @media (min-width: 768px) {
     .mobile-menu {
-      width: 320px; } }
+      width: 320px;
+      position: relative; } }
   @media (min-width: 1440px) {
     .mobile-menu {
       display: flex;
-      box-shadow: none; }
+      box-shadow: none;
+      position: relative; }
       .mobile-menu .circle-button--close-img {
         display: none; }
       .mobile-menu .circle-button--search-img {
@@ -826,7 +830,8 @@ li {
 .feedback-block {
   min-width: 320px;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  z-index: 2; }
   .feedback-block__mute-area {
     min-width: 320px;
     width: 100%;
@@ -867,7 +872,7 @@ li {
   height: 100vh;
   background-color: #fff;
   border-left: 1px solid #b8ffec;
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: 0px;
   padding-top: 90px;
@@ -914,7 +919,8 @@ li {
 .call-block {
   min-width: 320px;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  z-index: 2; }
   .call-block__mute-area {
     min-width: 320px;
     width: 100%;
@@ -955,7 +961,7 @@ li {
   height: 100vh;
   background-color: #fff;
   border-left: 1px solid #b8ffec;
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: 0px;
   padding-top: 90px;
